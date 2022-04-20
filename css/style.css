@@ -1,0 +1,281 @@
+/* common */
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+} 
+ul {
+    list-style-type: none !important;
+}
+:root {
+    --text-color: rgb(236, 117, 19);
+}
+.text-white {
+    color: white !important;
+}
+.text-weight {
+    font-weight: 650;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+    float: left;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 30%;
+}
+.col-4 {
+    width: 25%;
+}
+.col-5 {
+    width: 20%;
+}
+.col-6 {
+    width: 16.6666%;
+}
+.col-8 {
+    width: 12.5%;
+}
+
+body {
+    min-width: 330px;
+}
+/* end common */
+/* Header */
+#header {
+    height: 60px;
+    background-color: rgb(201, 186, 186);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+#header #logo {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 60px;
+    opacity: 0.8;
+}
+#header .header-item:hover {
+    background-color: rgb(85, 83, 83);
+    color: white;
+}
+#header .header-item {
+    display: inline-block;
+}
+#header .header-item a {
+    color: rgb(42, 44, 44);
+    line-height: 60px;   
+}
+#header .bars-btn {
+    display: none;
+}
+#header .search-btn{
+    position: relative;
+    box-shadow: 10px 5px 5px rgb(134, 94, 94);
+    line-height: 40px;
+    text-align: center;
+    width: 25%;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#header input {
+    border: white;
+    outline: none;
+}
+.search-btn .search-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--text-color);
+    font-weight: 900;
+}
+.search-icon2 {
+    display: none;
+}
+.close-icon {
+    display: none;
+    padding: 15px;
+    font-size: 20px;
+}
+/* End: Header */
+
+/* Slider */
+#slider {
+    width: 100%;
+    margin-top: 60px;
+    padding-top: 45%;
+    background: url('../File-anh.img/Anh-slider.jpg') top center / cover no-repeat;
+    position: relative;
+}
+#slider:hover {
+    opacity: 0.95;
+}
+
+#slider .text-slider {
+    position: absolute;
+    width: 100%;
+    top: 300px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+/* End: Slider */
+/* Footer */
+.footer-contact {
+    display: block;
+    height: 150px;
+    border-top: 5px solid var(--text-color);
+    border-bottom: 5px solid var(--text-color);
+}
+.footer-list {
+    display: inline-block;
+    width: 30%;
+    
+}
+#footer li {
+    float: left ;
+}
+#footer li a {
+    line-height: 140px;
+    color: black;
+}
+#footer a i:hover {
+    color: var(--text-color);
+}
+#footer a i {
+    padding: 15px;
+}
+#footer li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.footer-nav {
+    background: url('../File-anh.img/Anh-footer.jpg') top center / cover no-repeat;
+    width: 100%;
+    padding-top: 40%;
+    opacity: 0.8;
+}
+/* End: Footer */
+/* Tablet and mobile */
+@media screen and (max-width: 974px) {
+    #header {
+        height: 50px;
+    }
+    #header #logo {
+        font-size: 19px;
+        line-height: 50px;
+    }
+    .search-icon {
+        font-size: 14px;
+    }
+    #slider {
+        margin-top: 50px;
+    }
+}
+/* Tablet: width < 992px */
+@media screen and (min-width: 768px) and (max-width: 974px) {
+#header .header-list {
+    font-size: 12px;
+}
+#header .header-item a {
+    line-height: 50px;   
+}
+#header .search-btn{
+    line-height: 30px;
+}
+#slider .text-slider {
+    top: 250px;
+    font-size: 1.5rem;
+}
+}
+/* Mobile: width < 780px */
+@media screen and (max-width: 779px) {
+    #header #logo {
+        display: block;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 35.5%;
+    }
+    #header .header-list {
+        display: none;
+    }
+    #header .header-item {
+        display: block;
+        float: none;
+    }
+    #header {
+        background: url('../File-anh.img/Anh-moblie.jpg') top center / cover no-repeat;
+        background-image: none;
+        width: 100%;
+        height: auto;
+    }
+    #header .bars-btn {
+        position: absolute;
+        left: 0;
+        color: black;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 15px;                                                                                  
+    }
+    #header .search-btn {
+        display: none;
+    }
+    .search-icon2 {
+        position: absolute;
+        color: black;
+        width: auto;
+        height: auto;
+        display: block;
+        padding: 15px;   
+        right: 0;
+        top: 0;   
+    }
+    #header .bars-btn:hover {
+        color: var(--text-color);
+    }
+    .search-icon2:hover {
+        color: var(--text-color);
+    }
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .close-icon:hover {
+        color: red;
+    }
+    #slider .text-slider {
+        display: none;
+    }
+}
